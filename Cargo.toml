@@ -1,9 +1,24 @@
 [package]
-name = "nucleo-h743zi2-rs"
+name = "nucleo-h743zi2"
 version = "0.1.0"
 authors = ["Alex M. <alexmgit@protonmail.com>"]
 edition = "2018"
+license = "MIT"
+readme = "README.md"
+description = "Boilerplate for the Nucleo-H743ZI2 development board."
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[badges]
+maintenance = { status = "experimental" }
 
 [dependencies]
+rtt-target = "~0.3.0"
+cortex-m = "~0.7.1"
+cortex-m-rt = "~0.6.13"
+
+[dependencies.panic-rtt-target]
+version = "~0.1.1"
+features = ["cortex-m"]
+
+[dependencies.stm32h7]
+version = "~0.13.0"
+features = ["stm32h743"]
