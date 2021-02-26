@@ -31,10 +31,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "bare-metal"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f8fe8f5a8a398345e52358e18ff07cc17a568fbca5c6f73873d3a62056309603"
+
+[[package]]
 name = "bitfield"
 version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "46afbd2983a5d5a7bd740ccb198caf5b82f45c40c09c0eed36052d91cb92e719"
+
+[[package]]
+name = "cast"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4b9434b9a5aa1450faa3f9cb14ea0e8c53bb5d2b3c1bfd1ab4fc03e9f33fbfb0"
+dependencies = [
+ "rustc_version",
+]
 
 [[package]]
 name = "cortex-m"
@@ -43,7 +58,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9075300b07c6a56263b9b582c214d0ff037b00d45ec9fde1cc711490c56f1bb9"
 dependencies = [
  "aligned",
- "bare-metal",
+ "bare-metal 0.2.5",
  "bitfield",
  "cortex-m 0.7.1",
  "volatile-register",
@@ -55,7 +70,7 @@ version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a0b756a8bffc56025de45218a48ff9b801180440c0ee49a722b32d49dcebc771"
 dependencies = [
- "bare-metal",
+ "bare-metal 0.2.5",
  "bitfield",
  "embedded-hal",
  "volatile-register",
@@ -143,7 +158,7 @@ dependencies = [
  "cortex-m-rt",
  "panic-rtt-target",
  "rtt-target 0.3.0",
- "stm32h7",
+ "stm32h7xx-hal",
 ]
 
 [[package]]
@@ -155,6 +170,12 @@ dependencies = [
  "cortex-m 0.6.7",
  "rtt-target 0.2.2",
 ]
+
+[[package]]
+name = "paste"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c5d65c4d95931acda4498f675e332fcbdc9a06705cd07086c510e9b6009cd1c1"
 
 [[package]]
 name = "proc-macro2"
@@ -230,13 +251,30 @@ checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
 name = "stm32h7"
-version = "0.13.0"
+version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8b672c837e0ee8158ecc7fce0f9a948dd0693a9c588338e728d14b73307a0b7d"
+checksum = "7571f17d1ed7d67957d0004de6c52bd1ef5e736ed5ddc2bcecf001512269f77c"
 dependencies = [
- "bare-metal",
- "cortex-m 0.7.1",
+ "bare-metal 0.2.5",
+ "cortex-m 0.6.7",
  "vcell",
+]
+
+[[package]]
+name = "stm32h7xx-hal"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2df47cc6248aa85e5d5762f8755448270fd406b0a155557671de46cb5aef4546"
+dependencies = [
+ "bare-metal 1.0.0",
+ "cast",
+ "cortex-m 0.6.7",
+ "cortex-m-rt",
+ "embedded-hal",
+ "nb 1.0.0",
+ "paste",
+ "stm32h7",
+ "void",
 ]
 
 [[package]]

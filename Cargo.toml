@@ -19,6 +19,6 @@ cortex-m-rt = "~0.6.13"
 version = "~0.1.1"
 features = ["cortex-m"]
 
-[dependencies.stm32h7]
-version = "~0.13.0"
+[dependencies.stm32h7xx-hal]
+version = "~0.8.0"
 features = ["stm32h743"]
