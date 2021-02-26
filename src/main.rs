@@ -34,12 +34,9 @@
 //! That will flash the MCU, and when complete it will bring up an RTT terminal
 //! with the logging output from the MCU.
 //!
-//! Note: RTT currently does not work for this chip with probe-rs, see [probe-rs/issues/429].
-//!
 //! [cargo-embed]: https://crates.io/crates/cargo-embed
 //! [STM32H7432]: https://www.st.com/resource/en/datasheet/stm32h743vi.pdf
 //! [udev rules]: https://wiki.debian.org/udev
-//! [probe-rs/issues/429]: https://github.com/probe-rs/probe-rs/issues/429
 
 #![no_std]
 #![no_main]
@@ -68,6 +65,6 @@ fn main() -> ! {
 
     loop {
         compiler_fence(SeqCst);
-        cortex_m::asm::bkpt();
+        // cortex_m::asm::bkpt();
     }
 }

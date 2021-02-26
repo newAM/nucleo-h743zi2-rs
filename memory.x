@@ -2,5 +2,6 @@
 MEMORY
 {
   FLASH : ORIGIN = 0x08000000, LENGTH = 2M
-  RAM : ORIGIN = 0x20000000, LENGTH = 1M
+  /* Reduced to work around https://github.com/probe-rs/probe-rs/issues/429 */
+  RAM : ORIGIN = 0x24000000, LENGTH = 512K
 }
