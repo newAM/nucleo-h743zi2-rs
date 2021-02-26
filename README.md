@@ -1,4 +1,5 @@
 ![Maintenance](https://img.shields.io/badge/maintenance-experimental-blue.svg)
+[![CI](https://github.com/newAM/nucleo-h743zi2-rs/workflows/CI/badge.svg)](https://github.com/newAM/nucleo-h743zi2-rs/actions)
 
 # nucleo-h743zi2
 
