@@ -166,7 +166,7 @@ dependencies = [
  "cortex-m 0.7.2",
  "cortex-m-rt",
  "panic-rtt-target",
- "rtt-target 0.3.0",
+ "rtt-target 0.3.1",
  "stm32h7xx-hal",
 ]
 
@@ -221,9 +221,9 @@ dependencies = [
 
 [[package]]
 name = "rtt-target"
-version = "0.3.0"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "01a267556daa12832ffc20129af69a6db0a28af91bcf12b4468af21f48818f66"
+checksum = "065d6058bb1204f51a562a67209e1817cf714759d5cf845aa45c75fa7b0b9d9b"
 dependencies = [
  "ufmt-write",
 ]
