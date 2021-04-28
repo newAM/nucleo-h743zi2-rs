@@ -11,7 +11,7 @@ description = "Boilerplate for the Nucleo-H743ZI2 development board."
 maintenance = { status = "experimental" }
 
 [dependencies]
-rtt-target = "~0.3.0"
+rtt-target = "~0.3.1"
 cortex-m = "~0.7.2"
 cortex-m-rt = "~0.6.13"
 
