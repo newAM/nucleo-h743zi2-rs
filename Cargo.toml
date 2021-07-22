@@ -13,7 +13,7 @@ maintenance = { status = "experimental" }
 [dependencies]
 rtt-target = "~0.3.1"
 cortex-m = "~0.7.3"
-cortex-m-rt = "~0.6.14"
+cortex-m-rt = "~0.6.15"
 
 [dependencies.panic-rtt-target]
 version = "~0.1.2"
