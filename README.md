@@ -13,14 +13,14 @@ These are the [udev rules] I use for the on-board STLINK-V3 probe.
 
 Create this file:
 
-```
+```text
 # /etc/udev/rules.d/99-stm.rules
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374e", MODE="0666"
 ```
 
 Then reload the rules:
 
-```
+```bash
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
@@ -30,15 +30,15 @@ sudo udevadm trigger
 I assume you will use the included probe on the nucleo board (the USB port
 opposite the Ethernet jack).
 
-Use [cargo-embed] to flash the MCU:
+Use [probe-run] to flash the MCU:
 
-```
-cargo embed
+```bash
+cargo run
 ```
 
 That will flash the MCU, and when complete it will bring up an RTT terminal
 with the logging output from the MCU.
 
-[cargo-embed]: https://crates.io/crates/cargo-embed
+[probe-run]: https://github.com/knurling-rs/probe-run
 [STM32H7432]: https://www.st.com/resource/en/datasheet/stm32h743vi.pdf
 [udev rules]: https://wiki.debian.org/udev

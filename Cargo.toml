@@ -7,18 +7,22 @@ license = "MIT"
 readme = "README.md"
 description = "Boilerplate for the Nucleo-H743ZI2 development board."
 
-[badges]
-maintenance = { status = "experimental" }
-
 [dependencies]
-rtt-target = "~0.3.1"
-cortex-m = "~0.7.3"
-cortex-m-rt = "~0.6.15"
+defmt = "0.2"
+defmt-rtt = "0.2"
+cortex-m = "0.7"
+cortex-m-rt = "0.6"
+panic-probe = { version = "0.2", features = ["print-defmt" ] }
+stm32h7xx-hal = { version = "0.10", features = ["stm32h743"] }
 
-[dependencies.panic-rtt-target]
-version = "~0.1.2"
-features = ["cortex-m"]
+[features]
+# set logging levels here
+default = ["defmt-trace"]
 
-[dependencies.stm32h7xx-hal]
-version = "~0.10.0"
-features = ["stm32h743"]
+# do NOT modify these features
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
