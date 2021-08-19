@@ -11,7 +11,7 @@ description = "Boilerplate for the Nucleo-H743ZI2 development board."
 defmt = "0.2"
 defmt-rtt = "0.2"
 cortex-m = "0.7"
-cortex-m-rt = "0.6"
+cortex-m-rt = "0.7"
 panic-probe = { version = "0.2", features = ["print-defmt" ] }
 stm32h7xx-hal = { version = "0.10", features = ["stm32h743"] }
 
