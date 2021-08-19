@@ -1,10 +1,9 @@
 # see https://github.com/probe-rs/cargo-embed/blob/HEAD/src/config/default.toml
-# for configuration options
 
 [default.probe]
 # protocol = "Swd"
-vid = 0x0483
-pid = 0x374e
+usb_vid = "0483"
+usb_pid = "374e"
 
 [default.general]
 chip = "STM32H743ZITx"
