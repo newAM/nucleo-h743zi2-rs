@@ -1,7 +1,7 @@
 [package]
 name = "nucleo-h743zi2"
 version = "0.1.0"
-authors = ["Alex M. <alexmgit@protonmail.com>"]
+authors = ["Alex Martens <alex@thinglab.org>"]
 edition = "2018"
 license = "MIT"
 readme = "README.md"
@@ -9,12 +9,12 @@ description = "Boilerplate for the Nucleo-H743ZI2 development board."
 
 [dependencies]
 defmt = "0.3"
-defmt-rtt = "0.3"
-cortex-m = "0.7"
+defmt-rtt = "0.4"
+cortex-m = { version = "0.7.6", features = ["critical-section-single-core"] }
 cortex-m-rt = "0.7"
 panic-probe = { version = "0.3", features = ["print-defmt" ] }
 
 [dependencies.stm32h7xx-hal]
-version = "0.11"
-features = ["stm32h743", "rt", "unproven"]
+version = "0.13"
+features = ["stm32h743", "rt"]
 default-features = false
