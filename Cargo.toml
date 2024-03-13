@@ -15,6 +15,6 @@ cortex-m-rt = "0.7"
 panic-probe = { version = "0.3", features = ["print-defmt" ] }
 
 [dependencies.stm32h7xx-hal]
-version = "0.15"
+version = "0.16"
 features = ["stm32h743", "rt"]
 default-features = false
